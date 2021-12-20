@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //    function minArray(arr) {
+    //        let min = arr[0];
+    //        for(var i = 1; i < arr.length; i++){
+    //            if(arr[i] < min){
+    //                min = arr[i];
+    //            }
+    //        }
+    //        return min;
+    //    }
+    //
+
+
+    function minArray(arr) {
+        let min = arr[0];
+        let index = -1;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        for (let j = 0; j < arr.length; j++) {
+            if (min === arr[j]) {
+                index = j;
+                break;
+            }
+        }
+        return index;
+    }
+
+
+    let arr1 = [1, 5, 4, 8, 5, -8, 5, -9, -100];
+    let index = minArray(arr1);
+    if (index != -1) {
+        alert("Vị trí min là " + index + " , giá trị min là " + arr1[index]);
+    } else {
+        alert("Mảng rỗng")
+    }
+</script>
+</body>
+</html>
